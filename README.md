@@ -300,7 +300,9 @@ P(individual stressor RQ > threshold) against use reduction, by month.
 
 ## Figure 10
 
-Value of Information plots (experimental). No images are currently exported by `R/make_fig10.R`.
+Value of Information plots (experimental).
+
+![Fig10](images/fig10_voi.png)
 
 # Poster
 

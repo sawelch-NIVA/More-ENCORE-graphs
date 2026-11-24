@@ -15,7 +15,7 @@ data_voi_factor <- data_voi |>
       ordered(c("PESTI", "PHARM", "REACH"))
   )
 
-ggplot(
+voi_heatmap <- ggplot(
   data_voi_factor,
   mapping = aes(
     x = fct_rev(Threshold_SumRQ),
@@ -34,8 +34,16 @@ ggplot(
   labs(
     x = "Substance Class",
     y = "SumRQ > Threshold",
-    title = "Value of Information for Stressor Groups Across Different Scenarios"
+    title = "Value of Information for substance groups across RBDs and RQ thresholds"
   )
+
+ggsave(
+  "images/fig10_voi.png",
+  voi_heatmap,
+  width = 20,
+  height = 30,
+  units = "cm"
+)
 
 # ggplot(
 #   data_voi_factor,
